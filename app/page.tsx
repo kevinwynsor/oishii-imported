@@ -1,6 +1,6 @@
 'use client'
 import React, { useState, useEffect, useRef } from 'react';
-import { ShoppingCart, Phone, Globe, Mail, MapPin } from 'lucide-react';
+import { ShoppingCart, Phone, Instagram, Facebook } from 'lucide-react';
 
 const RamenPricelist = () => {
   const [visibleElements, setVisibleElements] = useState(new Set());
@@ -123,76 +123,72 @@ const RamenPricelist = () => {
           ))}
         </div>
 
-        {/* Contact Us Section */}
-        <section className="mx-auto justify-items-center">
-          <div 
-            className={`bg-white/80 backdrop-blur-sm rounded-3xl shadow-2xl transition-all duration-1000 transform mb-4 px-6 py-4`}
-          >
-          {/* Header */}
-          <div className="">
-              <h2 className="text-2xl font-bold text-center mb-2">
+        {/* Contact Us Card */}
+        <div
+          data-index="contact"
+          className={`transition-all duration-1000 transform mt-8 ${
+            visibleElements.has('contact') ? 'scale-100 opacity-100' : 'scale-95 opacity-0'
+          }`}
+        >
+          <div className="bg-white rounded-2xl shadow-xl overflow-hidden border-4 border-red-800 hover:shadow-2xl transition-shadow duration-300">
+            {/* Contact Header */}
+            <div className="bg-gradient-to-r from-red-800 to-red-700 p-4">
+              <h2 className="text-3xl font-bold text-amber-50 text-center tracking-wider">
                 CONTACT US
               </h2>
             </div>
-            
+
             {/* Contact Info */}
-            <div className="bg-white">
-              <div className="space-y-3">
-                {/* Phone */}
-                <div 
-                  className={`flex items-center gap-6 transition-all duration-500`}
-                  style={{ transitionDelay: '400ms' }}
-                >
-                  <div className="bg-blue-900 rounded-full p-4 flex-shrink-0">
-                    <Phone className="w-4 h-4 text-white" />
-                  </div>
-                  <span className="text-lg md:text-xl font-semibold">
-                    +123-456-7890
-                  </span>
+            <div className="p-8 space-y-6">
+              {/* Phone */}
+              <a
+                href="tel:+1234567890"
+                className="group flex items-center gap-4 p-4 bg-amber-50 rounded-xl hover:bg-gradient-to-r hover:from-amber-100 hover:to-orange-100 transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
+              >
+                <div className="bg-red-800 p-3 rounded-full transition-transform duration-300 group-hover:rotate-12">
+                  <Phone className="w-6 h-6 text-amber-50" />
                 </div>
+                <div>
+                  <p className="text-sm text-red-700 font-semibold">Phone</p>
+                  <p className="text-xl font-bold text-red-800">+63 123 456 7890</p>
+                </div>
+              </a>
 
-                {/* Website */}
-                <div 
-                  className={`flex items-center gap-6 transition-all duration-500`}
-                  style={{ transitionDelay: '600ms' }}
-                >
-                  <div className="bg-blue-900 rounded-full p-4 flex-shrink-0">
-                    <Globe className="w-4 h-4 text-white" />
-                  </div>
-                  <span className="text-lg md:text-xl font-semibold">
-                    www.aplayacrafts.com
-                  </span>
+              {/* Instagram */}
+              <a
+                href="https://instagram.com/yourusername"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center gap-4 p-4 bg-amber-50 rounded-xl hover:bg-gradient-to-r hover:from-amber-100 hover:to-orange-100 transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
+              >
+                <div className="bg-gradient-to-br from-purple-600 to-pink-600 p-3 rounded-full transition-transform duration-300 group-hover:rotate-12">
+                  <Instagram className="w-6 h-6 text-white" />
                 </div>
+                <div>
+                  <p className="text-sm text-red-700 font-semibold">Instagram</p>
+                  <p className="text-xl font-bold text-red-800">@yourusername</p>
+                </div>
+              </a>
 
-                {/* Email */}
-                <div 
-                  className={`flex items-center gap-6 transition-all duration-500`}
-                  style={{ transitionDelay: '800ms' }}
-                >
-                  <div className="bg-blue-900 rounded-full p-4 flex-shrink-0">
-                    <Mail className="w-4 h-4 text-white" />
-                  </div>
-                  <span className="text-lg md:text-xl font-semibold">
-                    hello@aplayacrafts.com
-                  </span>
+              {/* Facebook */}
+              <a
+                href="https://facebook.com/yourpage"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center gap-4 p-4 bg-amber-50 rounded-xl hover:bg-gradient-to-r hover:from-amber-100 hover:to-orange-100 transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
+              >
+                <div className="bg-blue-600 p-3 rounded-full transition-transform duration-300 group-hover:rotate-12">
+                  <Facebook className="w-6 h-6 text-white" />
                 </div>
-
-                {/* Address */}
-                <div 
-                  className={`flex items-center gap-6 transition-all duration-500`}
-                  style={{ transitionDelay: '1000ms' }}
-                >
-                  <div className="bg-blue-900 rounded-full p-4 flex-shrink-0">
-                    <MapPin className="w-4 h-4 text-white" />
-                  </div>
-                  <span className="text-lg md:text-xl font-semibold">
-                    123 Anywhere St., Any City
-                  </span>
+                <div>
+                  <p className="text-sm text-red-700 font-semibold">Facebook</p>
+                  <p className="text-xl font-bold text-red-800">Your Page Name</p>
                 </div>
-              </div>
+              </a>
             </div>
           </div>
-        </section>
+        </div>
+
 
         {/* Footer */}
         <div 
