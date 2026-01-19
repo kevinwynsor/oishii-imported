@@ -130,15 +130,15 @@ const RamenPricelist = () => {
                         className="group flex items-center justify-between p-4 bg-amber-50 rounded-xl hover:bg-gradient-to-r hover:from-amber-100 hover:to-orange-100 transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
                       >
                         <div className="flex items-center gap-4">
-                          <div className="text-4xl transition-transform duration-300 group-hover:scale-125 group-hover:rotate-12">
+                          <div className="text-xl md:text-4xl transition-transform duration-300 group-hover:scale-125 group-hover:rotate-12">
                             {item.image}
                           </div>
-                          <span className="text-2xl font-bold text-red-800 tracking-wide">
+                          <span className="text-lg md:text-2xl font-bold text-red-800 tracking-wide">
                             {item.name}
                           </span>
                         </div>
                         <div className="flex items-center gap-3">
-                          <span className="text-2xl font-bold text-red-700">
+                          <span className="text-lg md:text-2xl font-bold text-red-700">
                             {item.price}
                           </span>
                           <ShoppingCart className="w-6 h-6 text-red-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
