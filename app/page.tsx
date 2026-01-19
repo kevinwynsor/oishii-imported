@@ -137,7 +137,7 @@ const RamenPricelist = () => {
             </div>
 
             <div className="p-8 space-y-6 flex flex-row">
-              <div className='h-64 basis-1/2 group flex flex-col items-center gap-4 p-4 bg-amber-50 rounded-xl hover:bg-gradient-to-r hover:from-amber-100 hover:to-orange-100 transition-all duration-300 transform hover:scale-105 hover:shadow-lg mr-8'>
+              <div className='h-80 basis-1/2 group flex flex-col items-center gap-4 p-4 bg-amber-50 rounded-xl hover:bg-gradient-to-r hover:from-amber-100 hover:to-orange-100 transition-all duration-300 transform hover:scale-105 hover:shadow-lg mr-8'>
                 <div className='flex flex-col basis-1/2 justify-center'>
                 <img src="/courier.png" alt="delivery" width={200} height={150} className="mx-auto"/>
                 </div>
@@ -145,7 +145,7 @@ const RamenPricelist = () => {
                   <p className="text-lg md:text-xl font-bold text-red-800">Same-day delivery for greater manila (NCR, Bulacan, Cavite etc) via your selected courier</p>
                 </div>
               </div>
-              <div className='h-64 basis-1/2 flex-col group flex items-center gap-4 p-4 bg-amber-50 rounded-xl hover:bg-gradient-to-r hover:from-amber-100 hover:to-orange-100 transition-all duration-300 transform hover:scale-105 hover:shadow-lg justify-center'>
+              <div className='h-80 basis-1/2 flex-col group flex items-center gap-4 p-4 bg-amber-50 rounded-xl hover:bg-gradient-to-r hover:from-amber-100 hover:to-orange-100 transition-all duration-300 transform hover:scale-105 hover:shadow-lg justify-center'>
                 <div className='flex flex-col basis-1/2 justify-center'>
                 <img src="/ph.png" alt="delivery" width={200} height={150} className="mx-auto"/>
                 </div>
