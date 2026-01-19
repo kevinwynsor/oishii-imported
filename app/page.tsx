@@ -240,7 +240,7 @@ const RamenPricelist = () => {
           }`}
         >
           <p className="text-red-800 text-lg font-semibold">
-            Order now and enjoy authentic Japanese ramen!
+            Order now and enjoy authentic imported products!
           </p>
         </div>
 
