@@ -179,7 +179,7 @@ const RamenPricelist = () => {
                 </div>
                 <div>
                   <p className="text-sm text-red-700 font-semibold">Phone</p>
-                  <p className="text-xl font-bold text-red-800">+63 908 422 2891</p>
+                  <p className="text-lg md:text-xl font-bold text-red-800">+63 908 422 2891</p>
                 </div>
               </a>
 
@@ -211,7 +211,7 @@ const RamenPricelist = () => {
                 </div>
                 <div>
                   <p className="text-sm text-red-700 font-semibold">Facebook</p>
-                  <p className="text-xl font-bold text-red-800">Oishii Imported Goodies 
+                  <p className="text-lg md:text-xl font-bold text-red-800">Oishii Imported Goodies 
 </p>
                 </div>
               </a>
