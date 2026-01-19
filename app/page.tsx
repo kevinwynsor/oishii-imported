@@ -2,6 +2,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { ShoppingCart, Phone, Instagram, Facebook } from 'lucide-react';
 import Image from 'next/image';
+import { categories } from '@/constants/categories';
 
 const RamenPricelist = () => {
   const [modalImage, setModalImage] = useState<string | null>(null);
@@ -43,34 +44,6 @@ const RamenPricelist = () => {
     el.dataset.index = index;
     observerRef.current.observe(el);
   };
-
-  const categories = [
-    {
-      title: "JAPAN",
-      items: [
-        { name: "ICHIRAN 5 STRAIGHT", price: "₱1200", image: "🍜", photo: '/ichiran_5.png' },
-        { name: "ICHIRAN 5 CURLY", price: "₱1200", image: "🍜", photo: '/ichiran_curly.png' },
-        { name: "ICHIRAN 2 STRAIGHT", price: "₱650", image: "🍜", photo: '/ichiran_2.png' },
-        { name: "NISSIN SEAFOOD", price: "₱120", image: "🥡", photo: '/nissin.png' },
-        { name: "KITKAT MATCHA", price: "₱215", image: "🍫", photo: '/nissin.png' },
-        { name: "KITKAT DARK CHOCOLATE", price: "₱215", image: "🍫", photo: '/nissin.png' },
-        { name: "KITKAT ORIGINAL", price: "₱215", image: "🍫", photo: '/nissin.png' },
-        { name: "KITKAT STRAWBERRY", price: "₱215", image: "🍫", photo: '/nissin.png' }
-      ]
-    },
-    {
-      title: "KOREA",
-      items: [
-        { name: "BULDAK CARBONARA", price: "₱375", image: "🥵🍜", photo: '/buldak_carbo.png' },
-        { name: "LOTTE OK LUNCHEON MEAT ORIGINAL", price: "₱99", image: "🥫🍖", photo: '/lotte_ok.png' },
-        { name: "NAMKWANG SEAWEED (3pcs)", price: "₱50", image: "🌿", photo: '/namkwang_seaweed.png' },
-        { name: "PEPERO ORIGINAL", price: "₱45", image: "╱", photo: '/pepero_original.png' },
-        { name: "PEPERO ALMOND", price: "₱45", image: "╱", photo: '/pepero_almond.jpg' },
-        { name: "PEPERO STRAWBERRY", price: "₱45", image: "╱", photo: '/pepero_strawberry.png' },
-        { name: "PEPERO WHITE COOKIE", price: "₱45", image: "╱", photo: '/pepero_white_cookie.png' },
-      ]
-    },
-  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-r from-amber-50 to-orange-50
@@ -124,9 +97,14 @@ const RamenPricelist = () => {
                           <div className="text-xl md:text-4xl transition-transform duration-300 group-hover:scale-125 group-hover:rotate-12">
                             {item.image}
                           </div>
-                          <span className="text-lg md:text-2xl font-bold text-red-800 tracking-wide">
-                            {item.name}
-                          </span>
+                          <div className='flex flex-col'>
+                            <span className="text-lg md:text-2xl font-bold text-red-800 tracking-wide">
+                              {item.name}
+                            </span>
+                            {item.flavors && item.flavors.map((flavor)=>(
+                              <span key={flavor} className="text-sm md:text-md font-bold text-red-800 tracking-wide">{flavor}</span>
+                            ))}
+                          </div>
                         </div>
                         <div className="flex items-center gap-3">
                           <span className="text-lg md:text-2xl font-bold text-red-700">
@@ -143,6 +121,33 @@ const RamenPricelist = () => {
           })}
         </div>
 
+        {/* delivery */}
+        <div
+          ref={observe('delivery')}
+          className={`transition-all duration-1000 transform mt-8 ${
+            visibleElements.has('delivery') ? 'scale-100 opacity-100' : 'scale-95 opacity-0'
+          }`}
+        >
+          <div className="bg-white rounded-2xl shadow-xl overflow-hidden border-4 border-red-800 hover:shadow-2xl transition-shadow duration-300">
+            {/* Contact Header */}
+            <div className="bg-gradient-to-r from-red-800 to-red-700 p-4">
+              <h2 className="text-3xl font-bold text-amber-50 text-center tracking-wider">
+                🛵💨
+              </h2>
+            </div>
+
+            <div className="p-8 space-y-6">
+              <div className='group flex items-center gap-4 p-4 bg-amber-50 rounded-xl hover:bg-gradient-to-r hover:from-amber-100 hover:to-orange-100 transition-all duration-300 transform hover:scale-105 hover:shadow-lg'>
+                <p className="text-3xl md:text-4xl font-bold text-red-800">same-day delivery for greater manila (ncr,bulacan,cavite etc. basta search mo yon) via lalamove or grab express</p>
+              </div>
+              <div className='flex flex-row items-center group flex items-center gap-4 p-4 bg-amber-50 rounded-xl hover:bg-gradient-to-r hover:from-amber-100 hover:to-orange-100 transition-all duration-300 transform hover:scale-105 hover:shadow-lg'>
+                <img src="/ph.png" alt="delivery" width={600} height={400} className="mx-auto"/>
+                <p className="text-3xl md:text-4xl font-bold text-red-800">shipping nationwide via LBC</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Contact Us Card */}
         <div
           ref={observe('contact')}
@@ -154,58 +159,97 @@ const RamenPricelist = () => {
             {/* Contact Header */}
             <div className="bg-gradient-to-r from-red-800 to-red-700 p-4">
               <h2 className="text-3xl font-bold text-amber-50 text-center tracking-wider">
-                CONTACT US
+                HOW TO ORDER
               </h2>
             </div>
 
             {/* Contact Info */}
             <div className="p-8 space-y-6">
-              {/* Phone */}
-              <a
-                href="tel:+1234567890"
+              {/* STEP1 */}
+              <div
                 className="group flex items-center gap-4 p-4 bg-amber-50 rounded-xl hover:bg-gradient-to-r hover:from-amber-100 hover:to-orange-100 transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
               >
-                <div className="bg-red-800 p-3 rounded-full transition-transform duration-300 group-hover:rotate-12">
-                  <Phone className="w-6 h-6 text-amber-50" />
-                </div>
                 <div>
-                  <p className="text-sm text-red-700 font-semibold">Phone</p>
-                  <p className="text-lg md:text-xl font-bold text-red-800">+63 908 422 2891</p>
+                  <p className="text-lg md:text-xl font-bold text-red-800">1. Browse our products </p>
                 </div>
-              </a>
+              </div>
 
-              {/* Instagram */}
-              <a
-                href="https://instagram.com/oishii_imported_goodies"
-                target="_blank"
-                rel="noopener noreferrer"
+              {/* STEP2 */}
+              <div
                 className="group flex items-center gap-4 p-4 bg-amber-50 rounded-xl hover:bg-gradient-to-r hover:from-amber-100 hover:to-orange-100 transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
               >
-                <div className="bg-gradient-to-br from-purple-600 to-pink-600 p-3 rounded-full transition-transform duration-300 group-hover:rotate-12">
-                  <Instagram className="w-6 h-6 text-white" />
-                </div>
                 <div>
-                  <p className="text-sm text-red-700 font-semibold">Instagram</p>
-                  <p className="text-xs sm:text-xl font-bold text-red-800">@oishii_imported_goodies</p>
-                </div>
-              </a>
-
-              {/* Facebook */}
-              <a
+                  <p className="text-sm sm:text-xl font-bold text-red-800">2. Send a message on our FB or IG account (<a
                 href="https://www.facebook.com/profile.php?id=61574972720972"
-                target="_blank"
-                rel="noopener noreferrer"
+                target="_blank" className='text-blue-400'>FB </a> <a
+                href="https://instagram.com/oishii_imported_goodies"
+                target="_blank" className='text-blue-400'>IG</a>) with your order</p>
+                </div>
+              </div>
+
+              {/* STEP3 */}
+              <div
                 className="group flex items-center gap-4 p-4 bg-amber-50 rounded-xl hover:bg-gradient-to-r hover:from-amber-100 hover:to-orange-100 transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
               >
-                <div className="bg-blue-600 p-3 rounded-full transition-transform duration-300 group-hover:rotate-12">
-                  <Facebook className="w-6 h-6 text-white" />
-                </div>
                 <div>
-                  <p className="text-sm text-red-700 font-semibold">Facebook</p>
-                  <p className="text-lg md:text-xl font-bold text-red-800">Oishii Imported Goodies 
-</p>
+                  <p className="text-lg md:text-xl font-bold text-red-800">3. Wait for our confirmation message. You may choose which courier you prefer</p>
                 </div>
-              </a>
+              </div>
+
+              {/* STEP4 */}
+              <div
+                className="group flex items-center gap-4 p-4 bg-amber-50 rounded-xl hover:bg-gradient-to-r hover:from-amber-100 hover:to-orange-100 transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
+              >
+                <div>
+                  <p className="text-lg md:text-xl font-bold text-red-800">4. Settle payment. Once confirmed, we'll ship your order.</p>
+                </div>
+              </div>
+
+              {/* STEP5 */}
+              <div
+                className="group flex items-center gap-4 p-4 bg-amber-50 rounded-xl hover:bg-gradient-to-r hover:from-amber-100 hover:to-orange-100 transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
+              >
+                <div>
+                  <p className="text-lg md:text-xl font-bold text-red-800">5. Enjoy your imported goodies!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Terms and Policy */}
+        <div
+          ref={observe('terms')}
+          className={`transition-all duration-1000 transform mt-8 ${
+            visibleElements.has('terms') ? 'scale-100 opacity-100' : 'scale-95 opacity-0'
+          }`}
+        >
+          <div className="bg-white rounded-2xl shadow-xl overflow-hidden border-4 border-red-800 hover:shadow-2xl transition-shadow duration-300">
+            {/* Contact Header */}
+            <div className="bg-gradient-to-r from-red-800 to-red-700 p-4">
+              <h2 className="text-3xl font-bold text-amber-50 text-center tracking-wider">
+                TERMS AND POLICY
+              </h2>
+            </div>
+
+            {/* Contact Info */}
+            <div className="p-8 space-y-6">
+              <div
+                className="group flex items-center gap-4 p-4 bg-amber-50 rounded-xl hover:bg-gradient-to-r hover:from-amber-100 hover:to-orange-100 transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
+              >
+                <div>
+                  <p className="text-lg md:text-xl font-bold text-red-800">- Discount will be givenfor bulk orders</p>
+                </div>
+              </div>
+
+              <div
+                className="group flex items-center gap-4 p-4 bg-amber-50 rounded-xl hover:bg-gradient-to-r hover:from-amber-100 hover:to-orange-100 transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
+              >
+                <div>
+                  <p className="text-lg md:text-xl font-bold text-red-800">- No cash on delivery. Please pay before shipment.</p>
+                </div>
+              </div>
+              
             </div>
           </div>
         </div>
