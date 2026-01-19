@@ -132,23 +132,32 @@ const RamenPricelist = () => {
             {/* Contact Header */}
             <div className="bg-gradient-to-r from-red-800 to-red-700 p-4">
               <h2 className="text-3xl font-bold text-amber-50 text-center tracking-wider">
-                🛵💨
+                SHIPMENT
               </h2>
             </div>
 
-            <div className="p-8 space-y-6">
-              <div className='group flex items-center gap-4 p-4 bg-amber-50 rounded-xl hover:bg-gradient-to-r hover:from-amber-100 hover:to-orange-100 transition-all duration-300 transform hover:scale-105 hover:shadow-lg'>
-                <p className="text-3xl md:text-4xl font-bold text-red-800">same-day delivery for greater manila (ncr,bulacan,cavite etc. basta search mo yon) via lalamove or grab express</p>
+            <div className="p-8 space-y-6 flex flex-row">
+              <div className='h-64 basis-1/2 group flex flex-col items-center gap-4 p-4 bg-amber-50 rounded-xl hover:bg-gradient-to-r hover:from-amber-100 hover:to-orange-100 transition-all duration-300 transform hover:scale-105 hover:shadow-lg mr-8'>
+                <div className='flex flex-col basis-1/2 justify-center'>
+                <img src="/courier.png" alt="delivery" width={200} height={150} className="mx-auto"/>
+                </div>
+                <div className='flex flex-col basis-1/2 text-center'>
+                  <p className="text-lg md:text-xl font-bold text-red-800">Same-day delivery for greater manila (NCR, Bulacan, Cavite etc) via your selected courier</p>
+                </div>
               </div>
-              <div className='flex flex-row items-center group flex items-center gap-4 p-4 bg-amber-50 rounded-xl hover:bg-gradient-to-r hover:from-amber-100 hover:to-orange-100 transition-all duration-300 transform hover:scale-105 hover:shadow-lg'>
-                <img src="/ph.png" alt="delivery" width={600} height={400} className="mx-auto"/>
-                <p className="text-3xl md:text-4xl font-bold text-red-800">shipping nationwide via LBC</p>
+              <div className='h-64 basis-1/2 flex-col group flex items-center gap-4 p-4 bg-amber-50 rounded-xl hover:bg-gradient-to-r hover:from-amber-100 hover:to-orange-100 transition-all duration-300 transform hover:scale-105 hover:shadow-lg justify-center'>
+                <div className='flex flex-col basis-1/2 justify-center'>
+                <img src="/ph.png" alt="delivery" width={200} height={150} className="mx-auto"/>
+                </div>
+                <div className='flex flex-col basis-1/2 text-center justify-center'>
+                  <p className="text-lg md:text-xl font-bold text-red-800">Shipping nationwide via LBC</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Contact Us Card */}
+        {/* How to order */}
         <div
           ref={observe('contact')}
           className={`transition-all duration-1000 transform mt-8 ${
@@ -179,11 +188,11 @@ const RamenPricelist = () => {
                 className="group flex items-center gap-4 p-4 bg-amber-50 rounded-xl hover:bg-gradient-to-r hover:from-amber-100 hover:to-orange-100 transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
               >
                 <div>
-                  <p className="text-sm sm:text-xl font-bold text-red-800">2. Send a message on our FB or IG account (<a
+                  <p className="text-sm sm:text-xl font-bold text-red-800">2. Send a message on our <a
                 href="https://www.facebook.com/profile.php?id=61574972720972"
-                target="_blank" className='text-blue-400'>FB </a> <a
+                target="_blank" className='text-blue-600'>FB </a> or <a
                 href="https://instagram.com/oishii_imported_goodies"
-                target="_blank" className='text-blue-400'>IG</a>) with your order</p>
+                target="_blank" className='text-blue-600'>IG</a> account with your order</p>
                 </div>
               </div>
 
@@ -238,7 +247,7 @@ const RamenPricelist = () => {
                 className="group flex items-center gap-4 p-4 bg-amber-50 rounded-xl hover:bg-gradient-to-r hover:from-amber-100 hover:to-orange-100 transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
               >
                 <div>
-                  <p className="text-lg md:text-xl font-bold text-red-800">- Discount will be givenfor bulk orders</p>
+                  <p className="text-lg md:text-xl font-bold text-red-800">- Discount will be given for bulk orders</p>
                 </div>
               </div>
 
