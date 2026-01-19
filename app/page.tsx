@@ -195,7 +195,7 @@ const RamenPricelist = () => {
                 </div>
                 <div>
                   <p className="text-sm text-red-700 font-semibold">Instagram</p>
-                  <p className="text-xl font-bold text-red-800">@oishii_imported_goodies</p>
+                  <p className="text-lg md:text-xl font-bold text-red-800">@oishii_imported_goodies</p>
                 </div>
               </a>
 
