@@ -46,33 +46,24 @@ const RamenPricelist = () => {
 
   const categories = [
     {
-      title: "STRAIGHT RAMEN",
+      title: "JAPAN",
       items: [
-        { name: "ICHIRAN 5", price: "₱1200", image: "🍜", photo: '/ichiran_5.png' },
-        { name: "ICHIRAN 2", price: "₱650", image: "🍜", photo: '/ichiran_2.png' }
+        { name: "ICHIRAN 5 STRAIGHT", price: "₱1200", image: "🍜", photo: '/ichiran_5.png' },
+        { name: "ICHIRAN 5 CURLY", price: "₱1200", image: "🍜", photo: '/ichiran_curly.png' },
+        { name: "ICHIRAN 2 STRAIGHT", price: "₱650", image: "🍜", photo: '/ichiran_2.png' },
+        { name: "NISSIN SEAFOOD", price: "₱120", image: "🥡", photo: '/nissin.png' },
+        { name: "KITKAT MATCHA", price: "₱215", image: "🍫", photo: '/nissin.png' },
+        { name: "KITKAT DARK CHOCOLATE", price: "₱215", image: "🍫", photo: '/nissin.png' },
+        { name: "KITKAT ORIGINAL", price: "₱215", image: "🍫", photo: '/nissin.png' },
+        { name: "KITKAT STRAWBERRY", price: "₱215", image: "🍫", photo: '/nissin.png' }
       ]
     },
     {
-      title: "CURLY RAMEN",
+      title: "KOREA",
       items: [
-        { name: "ICHIRAN 5", price: "₱1200", image: "🍜", photo: '/ichiran_curly.png' },
-      ]
-    },
-    {
-      title: "NISSIN",
-      items: [
-        { name: "NISSIN SEAFOOD", price: "₱120", image: "🥡", photo: '/nissin.png' }
-      ]
-    },
-    {
-      title: "BULDAK",
-      items: [
-        { name: "BULDAK CARBONARA", price: "₱375", image: "🥵🍜", photo: '/buldak_carbo.png' }
-      ]
-    },
-    {
-      title: "PEPERO",
-      items: [
+        { name: "BULDAK CARBONARA", price: "₱375", image: "🥵🍜", photo: '/buldak_carbo.png' },
+        { name: "LOTTE OK LUNCHEON MEAT ORIGINAL", price: "₱99", image: "🥫🍖", photo: '/lotte_ok.png' },
+        { name: "NAMKWANG SEAWEED (3pcs)", price: "₱50", image: "🌿", photo: '/namkwang_seaweed.png' },
         { name: "PEPERO ORIGINAL", price: "₱45", image: "╱", photo: '/pepero_original.png' },
         { name: "PEPERO ALMOND", price: "₱45", image: "╱", photo: '/pepero_almond.jpg' },
         { name: "PEPERO STRAWBERRY", price: "₱45", image: "╱", photo: '/pepero_strawberry.png' },
