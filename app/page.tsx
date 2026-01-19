@@ -188,7 +188,7 @@ const RamenPricelist = () => {
                 className="group flex items-center gap-4 p-4 bg-amber-50 rounded-xl hover:bg-gradient-to-r hover:from-amber-100 hover:to-orange-100 transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
               >
                 <div>
-                  <p className="text-sm sm:text-xl font-bold text-red-800">2. Send a message on our <a
+                  <p className="text-lg sm:text-xl font-bold text-red-800">2. Send a message on our <a
                 href="https://www.facebook.com/profile.php?id=61574972720972"
                 target="_blank" className='text-blue-600'>FB </a> or <a
                 href="https://instagram.com/oishii_imported_goodies"
