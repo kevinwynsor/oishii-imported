@@ -12,7 +12,7 @@ export const categories = [
   {
     title: "CHOCOLATES",
     items: [
-      { name: "KITKAT", price: "₱215", image: "🍫", photo: '/nissin.png', flavors : ['DARK CHOCOLATE', 'MATCHA',  'ORIGINAL', 'STRAWBERRY'] },
+      { name: "KITKAT", price: "₱215", image: "🍫", photo: '/nissin.png', flavors : ['DARK CHOCO', 'MATCHA',  'ORIGINAL', 'STRAWBERRY'] },
       { name: "PEPERO", price: "₱45", image: "╱", photo: '/pepero_almond.jpg', flavors : ['ALMOND', 'ORIGINAL', 'STRAWBERRY', 'WHITE COOKIE'] },
     ]
   },
