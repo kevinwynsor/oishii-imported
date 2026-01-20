@@ -247,7 +247,7 @@ const RamenPricelist = () => {
                 className="group flex items-center gap-4 p-4 bg-amber-50 rounded-xl hover:bg-gradient-to-r hover:from-amber-100 hover:to-orange-100 transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
               >
                 <div>
-                  <p className="text-lg md:text-xl font-bold text-red-800">- Discount will be given for bulk orders</p>
+                  <p className="text-lg md:text-xl font-bold text-red-800">Discount will be given for bulk orders</p>
                 </div>
               </div>
 
@@ -255,7 +255,7 @@ const RamenPricelist = () => {
                 className="group flex items-center gap-4 p-4 bg-amber-50 rounded-xl hover:bg-gradient-to-r hover:from-amber-100 hover:to-orange-100 transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
               >
                 <div>
-                  <p className="text-lg md:text-xl font-bold text-red-800">- No cash on delivery. Please pay before shipment.</p>
+                  <p className="text-lg md:text-xl font-bold text-red-800">No cash on delivery. Please pay before shipment.</p>
                 </div>
               </div>
               
