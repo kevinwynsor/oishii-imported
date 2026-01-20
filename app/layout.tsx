@@ -13,10 +13,22 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "Oishii Imported Goodies",
-  description: "Authentic imported japan and korean goodies in PH",
-};
+export const metadata = {
+  title: 'Oishii Imported Goodies',
+  description: 'Imported japanese, korean snacks & ramen 🍜',
+  openGraph: {
+    title: 'Oishii Imported Goodies',
+    description: 'Imported japanese, korean snacks & ramen 🍜',
+    images: [
+      {
+        url: '/logo.png',
+        width: 1200,
+        height: 630,
+        alt: 'Oishii Imported Goodies Logo',
+      },
+    ],
+  },
+}
 
 export default function RootLayout({
   children,
