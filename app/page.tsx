@@ -125,7 +125,7 @@ const RamenPricelist = () => {
         <div
           ref={observe('delivery')}
           className={`transition-all duration-1000 transform mt-8 ${
-            visibleElements.has('delivery') ? 'scale-100 opacity-100' : 'scale-95 opacity-0'
+            visibleElements.has('delivery')  ? 'translate-x-0 opacity-100': '-translate-x-20 opacity-0'
           }`}
         >
           <div className="bg-white rounded-2xl shadow-xl overflow-hidden border-4 border-red-800 hover:shadow-2xl transition-shadow duration-300">
@@ -161,7 +161,7 @@ const RamenPricelist = () => {
         <div
           ref={observe('contact')}
           className={`transition-all duration-1000 transform mt-8 ${
-            visibleElements.has('contact') ? 'scale-100 opacity-100' : 'scale-95 opacity-0'
+            visibleElements.has('contact') ? 'translate-x-0 opacity-100': '-translate-x-20 opacity-0'
           }`}
         >
           <div className="bg-white rounded-2xl shadow-xl overflow-hidden border-4 border-red-800 hover:shadow-2xl transition-shadow duration-300">
@@ -230,7 +230,7 @@ const RamenPricelist = () => {
         <div
           ref={observe('terms')}
           className={`transition-all duration-1000 transform mt-8 ${
-            visibleElements.has('terms') ? 'scale-100 opacity-100' : 'scale-95 opacity-0'
+            visibleElements.has('terms') ? 'translate-x-0 opacity-100': '-translate-x-20 opacity-0'
           }`}
         >
           <div className="bg-white rounded-2xl shadow-xl overflow-hidden border-4 border-red-800 hover:shadow-2xl transition-shadow duration-300">
