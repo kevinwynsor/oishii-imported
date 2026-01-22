@@ -1,6 +1,6 @@
 'use client'
 import React, { useState, useEffect, useRef } from 'react';
-import { ShoppingCart, Phone, Instagram, Facebook } from 'lucide-react';
+import { MoveDiagonal } from 'lucide-react';
 import Image from 'next/image';
 import { categories } from '@/constants/categories';
 
@@ -110,7 +110,7 @@ const RamenPricelist = () => {
                             <span className="text-lg md:text-2xl font-bold text-red-800 tracking-wide">
                               {item.name}
                             </span>
-                            {item.flavors && item.flavors.map((flavor)=>(
+                            {item.flavors.map((flavor)=>(
                               <span key={flavor} className="text-sm md:text-md font-bold text-red-800 tracking-wide">{flavor}</span>
                             ))}
                           </div>
@@ -119,7 +119,7 @@ const RamenPricelist = () => {
                           <span className="text-lg md:text-2xl font-bold text-red-700">
                             {item.price}
                           </span>
-                          <ShoppingCart className="w-6 h-6 text-red-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                          <MoveDiagonal className="w-6 h-6 text-red-600 transition-transform duration-300 group-hover:scale-125" />
                         </div>
                       </div>
                     ))}
