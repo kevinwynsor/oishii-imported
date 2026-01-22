@@ -94,8 +94,16 @@ const RamenPricelist = () => {
                         className="group flex items-center justify-between p-4 bg-amber-50 rounded-xl hover:bg-gradient-to-r hover:from-amber-100 hover:to-orange-100 transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
                       >
                         <div className="flex items-center gap-4">
-                          <div className="text-xl md:text-4xl transition-transform duration-300 group-hover:scale-125 group-hover:rotate-12">
-                            {item.image}
+                          <div className="text-xl md:text-4xl transition-transform duration-300 group-hover:scale-125 group-hover:rotate-12
+                            w-10 h-10 md:w-12 md:h-12 flex items-center justify-center">
+                            {item.image.endsWith('.png') ? (
+                              <img
+                                src={item.image}
+                                alt={item.image}
+                              />
+                            ) : (
+                              <>{item.image}</>
+                            )}
                           </div>
                           <div className='flex flex-col'>
                             <span className="text-lg md:text-2xl font-bold text-red-800 tracking-wide">

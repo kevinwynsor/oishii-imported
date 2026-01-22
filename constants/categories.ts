@@ -5,7 +5,7 @@ export const categories = [
       { name: "ICHIRAN 5 STRAIGHT", price: "₱1200", image: "🍜", photo: '/ichiran_5.png', flavors : [] },
       { name: "ICHIRAN 5 CURLY", price: "₱1200", image: "🍜", photo: '/ichiran_curly.png', flavors : [] },
       { name: "ICHIRAN 2 STRAIGHT", price: "₱650", image: "🍜", photo: '/ichiran_2.png', flavors : [] },
-      { name: "BULDAK CARBONARA", price: "₱375", image: "🥵🍜", photo: '/buldak_carbo.png', flavors : [] },
+      { name: "BULDAK CARBONARA", price: "₱375", image: '/carbo_logo.png', photo: '/buldak_carbo.png', flavors : [] },
       { name: "NISSIN SEAFOOD", price: "₱120", image: "🥡", photo: '/nissin.png', flavors : [] },
     ]
   },
@@ -19,8 +19,8 @@ export const categories = [
   {
     title: "SNACKS AND OTHERS",
     items: [
-      { name: "LOTTE OK LUNCHEON MEAT ORIGINAL", price: "₱99", image: "🥫🍖", photo: '/lotte_ok.png', flavors : [] },
-      { name: "NAMKWANG SEAWEED (3pcs)", price: "₱50", image: "🌿", photo: '/namkwang_seaweed.png', flavors : [] },
+      { name: "LOTTE OK LUNCHEON MEAT ORIGINAL", price: "₱99", image: "lotte_logo.png", photo: '/lotte_ok.png', flavors : [] },
+      { name: "NAMKWANG SEAWEED (3pcs)", price: "₱50", image: "seaweed_logo.png", photo: '/namkwang_seaweed.png', flavors : [] },
     ]
   },
 ];
