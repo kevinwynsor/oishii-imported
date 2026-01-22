@@ -100,6 +100,7 @@ const RamenPricelist = () => {
                               <img
                                 src={item.image}
                                 alt={item.image}
+                                className="w-full h-full object-contain scale-125"
                               />
                             ) : (
                               <>{item.image}</>
