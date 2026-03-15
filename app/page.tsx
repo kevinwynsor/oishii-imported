@@ -63,6 +63,25 @@ const RamenPricelist = () => {
             PRICELIST
           </h1>
           <div className="w-24 h-1 bg-red-600 mx-auto rounded-full"></div>
+          {/* Disclaimer */}
+          <div className="mx-auto my-5">
+            <div className="relative border border-dashed border-amber-700 rounded-lg bg-amber-50 px-5 py-4 pl-14">
+              <div className="absolute left-4 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-amber-700 flex items-center justify-center text-amber-50 font-black text-sm select-none">
+                !
+              </div>
+
+              <p
+                className="text-amber-800 text-md font-black uppercase mb-1"
+              >
+                Disclaimer
+              </p>
+              <p className="text-amber-900 text-sm leading-relaxed">
+                Prices listed are for reference only and may vary without prior notice due to market
+                conditions, supplier pricing. All prices are subject to change. Please confirm current prices with
+                us before ordering. We appreciate your understanding.
+              </p>
+            </div>
+          </div>
         </div>
 
         {/* Categories */}
