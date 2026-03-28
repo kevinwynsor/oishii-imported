@@ -21,6 +21,7 @@ export const categories = [
     items: [
       { name: "LOTTE OK LUNCHEON MEAT ORIGINAL", price: "₱99", image: "lotte_logo.png", photo: '/lotte_ok.png', flavors : [] },
       { name: "NAMKWANG SEAWEED (3pcs)", price: "₱50", image: "seaweed_logo.png", photo: '/namkwang_seaweed.png', flavors : [] },
+      { name: "Lion King Sungsung peanuts", price: "₱190", image: "🥜", photo: '/peanut.png', flavors : [] },
     ]
   },
 ];
