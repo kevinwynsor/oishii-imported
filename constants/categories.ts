@@ -35,7 +35,6 @@ export const categories: Category[] = [
         note: "Straight noodles",
         photos: ["/ichiran_2.png"],
       },
-      { name: "Buldak Carbonara", price: "₱360", photos: ["/buldak_carbo.png"] },
       { name: "Nissin Seafood", price: "₱115", photos: ["/nissin.png"] },
     ],
   },
