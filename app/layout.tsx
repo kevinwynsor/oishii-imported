@@ -1,35 +1,40 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import { Analytics } from "@vercel/analytics/next"
+import type { Metadata, Viewport } from "next";
+import { Noto_Sans_JP, Shippori_Mincho_B1 } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const notoSansJP = Noto_Sans_JP({
+  variable: "--font-noto-sans-jp",
+  weight: ["400", "500", "700"],
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const shippori = Shippori_Mincho_B1({
+  variable: "--font-shippori",
+  weight: ["600", "800"],
   subsets: ["latin"],
 });
 
-export const metadata = {
-  title: 'Oishii Imported Goodies',
-  description: 'Imported japanese, korean snacks & ramen 🍜',
+export const metadata: Metadata = {
+  title: "Oishii Imported Goodies",
+  description: "Imported japanese, korean snacks & ramen 🍜",
   openGraph: {
-    title: 'Oishii Imported Goodies',
-    description: 'Imported japanese, korean snacks & ramen 🍜',
+    title: "Oishii Imported Goodies",
+    description: "Imported japanese, korean snacks & ramen 🍜",
     images: [
       {
-        url: '/logo.png',
+        url: "/logo.png",
         width: 1200,
         height: 630,
-        alt: 'Oishii Imported Goodies Logo',
+        alt: "Oishii Imported Goodies Logo",
       },
     ],
   },
-}
+};
+
+export const viewport: Viewport = {
+  themeColor: "#120d0a",
+};
 
 export default function RootLayout({
   children,
@@ -37,12 +42,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <Analytics/>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    <html lang="en" className={`${notoSansJP.variable} ${shippori.variable}`}>
+      <body className="antialiased">
         {children}
+        <Analytics />
       </body>
     </html>
   );
